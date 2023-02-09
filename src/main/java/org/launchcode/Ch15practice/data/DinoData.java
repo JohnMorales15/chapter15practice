@@ -12,4 +12,8 @@ public class DinoData {
     public static ArrayList<Dinosaur> getAllDinos(){
         return allDinos;
     }
+
+    public static void addDino(Dinosaur dinosaur){
+        allDinos.add(dinosaur);
+    }
 }
