@@ -16,10 +16,10 @@
             <th>Aquatic?</th>
         </tr>
         <tr th:each="dino : ${allDinos}">
-            <td th:text="${dino.getId()}"></td>
-            <td th:text="${dino.getSpecies()}"></td>
-            <td th:text="${dino.getDiet()}"></td>
-            <td th:text="${dino.isAquatic()}"></td>
+            <td th:text="${dino.id}"></td>
+            <td th:text="${dino.species}"></td>
+            <td th:text="${dino.diet}"></td>
+            <td th:text="${dino.aquatic}"></td>
         </tr>
     </table>
 </body>
