@@ -19,6 +19,13 @@
     When did the Dino lay the egg?
     <input type="date" th:field="${dinoEgg.dateLaid}"/>
     <br>
+    Which dino laid this egg?
+    <select name="dinosaurId">
+        <option th:each="dino : ${allDinos}"
+                th:value="${dino.id}"
+                th:text="${dino.species}">
+        </option>
+    </select>
     <button>Create Egg!</button>
 </form>
 </body>
