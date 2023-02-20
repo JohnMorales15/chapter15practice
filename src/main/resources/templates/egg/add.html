@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>
+        Create new dinosaur eggs
+    </h1>
+
+<form method="post">
+    Size of egg (inches):
+    <input type="number" th:field="${dinoEgg.sizeInches}"/>
+    <br>
+    Weight of egg (kg):
+    <input type="number" th:field="${dinoEgg.weightKg}"/>
+    <br>
+    When did the Dino lay the egg?
+    <input type="date" th:field="${dinoEgg.dateLaid}"/>
+    <br>
+    <button>Create Egg!</button>
+</form>
+</body>
+</html>
