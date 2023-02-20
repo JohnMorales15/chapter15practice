@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class DinoData {
-
-    private static ArrayList<Dinosaur> allDinos = new ArrayList<>();
-
-    public static ArrayList<Dinosaur> getAllDinos(){
-        return allDinos;
-    }
-
-    public static void addDino(Dinosaur dinosaur){
-        allDinos.add(dinosaur);
-    }
+//
+//    private static ArrayList<Dinosaur> allDinos = new ArrayList<>();
+//
+//    public static ArrayList<Dinosaur> getAllDinos(){
+//        return allDinos;
+//    }
+//
+//    public static void addDino(Dinosaur dinosaur){
+//        allDinos.add(dinosaur);
+//    }
 }

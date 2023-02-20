@@ -1,14 +1,25 @@
 package org.launchcode.Ch15practice.models;
 
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
+
+@Entity
 public class Dinosaur {
+
+    @Id
+    @GeneratedValue
     private int id;
-    private static int nextId = 1;
-    @NotBlank(message = "Species required!")
+
+    @NotBlank
     @Size(min = 3)
     private String species;
 
@@ -17,12 +28,11 @@ public class Dinosaur {
     @NotNull
     private String aquatic;
 
-    public Dinosaur(){
-        this.id = nextId;
-        nextId++;
-    }
+    @OneToMany(mappedBy = "dinosaur")
+    private final List<DinoEgg> dinoEgg = new ArrayList<>();
+    public Dinosaur(){}
+
     public Dinosaur(String species, String diet, String aquatic) {
-        this();
         this.species = species;
         this.diet = diet;
         this.aquatic = aquatic;
@@ -32,9 +42,6 @@ public class Dinosaur {
         return id;
     }
 
-    public static int getNextId() {
-        return nextId;
-    }
 
     public String getSpecies() {
         return species;
